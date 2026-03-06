@@ -2,8 +2,7 @@
 id: keyve
 name: keyve
 type: shield
-url: https://github.com/steve-roper/zmk-config
-requires: [nice_nano_v2]
+requires: [nice_nano]
 features:
   - keys
 siblings:
