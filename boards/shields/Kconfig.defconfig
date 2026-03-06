@@ -1,0 +1,13 @@
+if SHIELD_KEYVE_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "keyve"
+
+endif
+
+if SHIELD_KEYVE_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "keyve"
+
+endif

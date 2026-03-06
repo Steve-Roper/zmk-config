@@ -20,6 +20,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: splitreus62_left
+    shield: keyve_left
   - board: nice_nano_v2
-    shield: splitreus62_right
+    shield: keyve_right

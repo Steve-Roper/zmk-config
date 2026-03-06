@@ -1,0 +1,11 @@
+﻿file_format: "1"
+id: keyve
+name: keyve
+type: shield
+url: https://github.com/steve-roper/zmk-config
+requires: [nice_nano_v2]
+features:
+  - keys
+siblings:
+  - keyve_left
+  - keyve_right

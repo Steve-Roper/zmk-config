@@ -1,0 +1,5 @@
+config SHIELD_KEYVE_LEFT
+    def_bool $(shields_list_contains,keyve_left)
+
+config SHIELD_KEYVE_RIGHT
+    def_bool $(shields_list_contains,keyve_right)
