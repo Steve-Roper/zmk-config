@@ -3,28 +3,45 @@
 
 / {
     chosen {
-        zmk,matrix-transform = &keyve_left_transform;
-        zmk,physical-layout = &keyve_left_layout;
+        zmk,matrix-transform = &keyve_right_transform;
+        zmk,physical-layout = &keyve_right_layout;
     };
 
-    keyve_left_transform: matrix_transform {
+    keyve_right_transform: matrix_transform {
         compatible = "zmk,matrix-transform";
         rows = <5>;
         columns = <6>;
 
+        /*
+         * Visual layout:
+         * 7  8  9  0  -  =
+         * U  I  O  P  Å  ¨
+         * J  K  L  Ö  Ä  '
+         * M  ,  .  -  SH UP
+         * EN       RS AL CT
+         */
         map = <
-            RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)
-            RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5)
-            RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)
-            RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)
-            RC(4,0) RC(4,1) RC(4,2)                 RC(4,5)
+            /* row 0 */
+            RC(3,5) RC(2,5) RC(1,5) RC(4,5) RC(0,4) RC(0,5)
+
+            /* row 1 */
+            RC(3,2) RC(2,2) RC(1,2) RC(4,2) RC(1,4) RC(0,2)
+
+            /* row 2 */
+            RC(3,1) RC(2,1) RC(1,1) RC(4,1) RC(2,4) RC(0,1)
+
+            /* row 3 */
+            RC(3,0) RC(2,0) RC(1,0) RC(4,0) RC(3,4) RC(0,0)
+
+            /* row 4 */
+            RC(3,3)                 RC(0,3) RC(1,3) RC(2,3)
         >;
     };
 
-    keyve_left_layout: physical_layout_0 {
+    keyve_right_layout: physical_layout_0 {
         compatible = "zmk,physical-layout";
-        display-name = "Keyve Left";
-        transform = <&keyve_left_transform>;
+        display-name = "Keyve Right";
+        transform = <&keyve_right_transform>;
         kscan = <&kscan0>;
     };
 };
